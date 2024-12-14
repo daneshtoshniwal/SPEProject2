@@ -22,7 +22,7 @@
         chdir: "{{ playbook_dir }}/../Deployment"
 
     - name: Pull the Docker images specifed in docker-compose
-      command: sudo -S docker-compose pull
+      command: "echo d | sudo -S docker-compose pull"
       args:
         chdir: "{{ playbook_dir }}/../Deployment"
 
