@@ -1,7 +1,7 @@
 ---
 - name: Deploy Dockerized Application
   hosts: localhost
-  become: true  # Escalates privileges when required
+  become: false  # Escalates privileges when required
   tasks:
     - name: Ensure Docker Compose is installed
       command: docker compose version
