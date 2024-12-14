@@ -1,9 +1,10 @@
 version: '3.8'
 services:
   frontend:
-    build:
-      context: ../Client
-      dockerfile: Dockerfile
+#    build:
+#      context: ../Client
+#      dockerfile: Dockerfile
+    image: daneshtoshniwal/client1
     ports:
       - "3000:80"
     environment:
@@ -14,9 +15,10 @@ services:
 #      - backend
 
   backend:
-    build:
-      context: ../Server
-      dockerfile: Dockerfile
+#    build:
+#      context: ../Server
+#      dockerfile: Dockerfile
+    image: daneshtoshniwal/server1
     ports:
       - "5000:5000"
     environment:

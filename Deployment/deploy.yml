@@ -21,6 +21,11 @@
       args:
         chdir: "{{ playbook_dir }}/../Deployment"
 
+    - name: Pull the Docker images specifed in docker-compose
+      shell:
+        cmd: docker-compose pull
+        chdir: ./
+
     - name: Build and run Docker containers
       command: docker compose up -d --build
       args:
